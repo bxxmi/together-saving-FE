@@ -1,12 +1,13 @@
-import React from "react";
+import React, { memo } from "react";
 import styled from "styled-components";
 import H3 from "../../components/H3";
 import { useNavigate } from "react-router-dom";
 
 const MODE = ["자율", "경쟁"];
 
-const MoreShowItem = ({ category, data }) => {
+const MoreShowItem = memo(({ category, data }) => {
   const navigate = useNavigate();
+
   const { id, thumbnail, mode, period, date, title, tags, remain_date } = data;
 
   const handleNavigate = () => {
@@ -36,7 +37,7 @@ const MoreShowItem = ({ category, data }) => {
       </TagsContainer>
     </ChallengeItem>
   );
-};
+});
 
 const ChallengeItem = styled.li`
   width: 164px;
