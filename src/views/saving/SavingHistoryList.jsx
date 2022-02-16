@@ -122,11 +122,11 @@ const HistoryContainer = styled.ul`
   height: 97px;
   margin-bottom: 56px;
   overflow-y: scroll;
-  -ms-overflow-style: none; /* IE and Edge */
+  -ms-overflow-style: none;
   scrollbar-width: none;
 
   &::-webkit-scrollbar {
-    display: none; /* Chrome , Safari , Opera */
+    display: none;
   }
 `;
 
